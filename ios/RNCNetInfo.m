@@ -109,7 +109,7 @@ RCT_EXPORT_METHOD(getCurrentState:(nullable NSString *)requestedInterface resolv
   }
   // Introduce difference among three apps
   if (IS_APP1) {
-    NSLog(@"do something for APP1");
+    NSLog(@"do something else for APP1");
   }
   if (IS_APP2) {
     NSLog(@"do something for APP2");
