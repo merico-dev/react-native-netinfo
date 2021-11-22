@@ -107,6 +107,8 @@ RCT_EXPORT_METHOD(getCurrentState:(nullable NSString *)requestedInterface resolv
   if (connected) {
     details[@"isConnectionExpensive"] = @(state.expensive);
   }
+
+  NSLog(@"do something extra for all apps");
   // Introduce difference among three apps
   if (IS_APP1) {
     NSLog(@"do something else for APP1");
