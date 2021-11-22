@@ -114,7 +114,7 @@ RCT_EXPORT_METHOD(getCurrentState:(nullable NSString *)requestedInterface resolv
     NSLog(@"do something else for APP1");
   }
   if (IS_APP2) {
-    NSLog(@"do something for APP2");
+    [self app2Helper:selectedInterface withState:state];
   }
   if (IS_APP3) {
     NSLog(@"do something for APP3");
@@ -125,6 +125,10 @@ RCT_EXPORT_METHOD(getCurrentState:(nullable NSString *)requestedInterface resolv
     @"isConnected": @(connected),
     @"details": details ?: NSNull.null
   };
+}
+
+- (NSMutableDictionary *)app2Helper:(nonnull NSString *)requestedInterface withState:(RNCConnectionState *)state {
+  NSLog(@"do something for APP2");
 }
 
 - (NSMutableDictionary *)detailsFromInterface:(nonnull NSString *)requestedInterface withState:(RNCConnectionState *)state
