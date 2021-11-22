@@ -107,6 +107,16 @@ RCT_EXPORT_METHOD(getCurrentState:(nullable NSString *)requestedInterface resolv
   if (connected) {
     details[@"isConnectionExpensive"] = @(state.expensive);
   }
+  // Introduce difference among three apps
+  if (IS_APP1) {
+    NSLog(@"do something for APP1");
+  }
+  if (IS_APP2) {
+    NSLog(@"do something for APP2");
+  }
+  if (IS_APP3) {
+    NSLog(@"do something for APP3");
+  }
 
   return @{
     @"type": selectedInterface,

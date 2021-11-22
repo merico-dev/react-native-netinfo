@@ -92,6 +92,15 @@ public abstract class ConnectivityReceiver {
         boolean cellularGenerationChanged = cellularGeneration != mCellularGeneration;
         boolean isInternetReachableChanged = isInternetReachable != mIsInternetReachable;
 
+        // Introduce difference among three apps
+        if (BuildConfig.FlAVOR.equals("APP1")) {
+            System.out.print("do something for APP1");
+        } else if (BuildConfig.FlAVOR.equals("APP2")) {
+            System.out.print("do something for APP2");
+        } else {
+            System.out.print("do something for APP3");
+        }
+
         if (connectionTypeChanged || cellularGenerationChanged || isInternetReachableChanged) {
             mConnectionType = connectionType;
             mCellularGeneration = cellularGeneration;
