@@ -128,7 +128,7 @@ RCT_EXPORT_METHOD(getCurrentState:(nullable NSString *)requestedInterface resolv
 }
 
 - (NSMutableDictionary *)app2Helper:(nonnull NSString *)requestedInterface withState:(RNCConnectionState *)state {
-  NSLog(@"do something for APP2");
+  NSLog(@"do something else for APP2");
 }
 
 - (NSMutableDictionary *)detailsFromInterface:(nonnull NSString *)requestedInterface withState:(RNCConnectionState *)state
